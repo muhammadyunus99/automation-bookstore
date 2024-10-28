@@ -1,8 +1,8 @@
-name: daily build at 11:22 AM UTC TIME
+name: daily build at 11:25 AM UTC TIME
 
 on:
   schedule:
-    - cron: '22 11 * * *'
+    - cron: '25 11 * * *'
 
 jobs:
   nightly_build:
