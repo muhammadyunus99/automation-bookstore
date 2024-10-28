@@ -1,0 +1,25 @@
+name: nightly build at 2:30 PM
+
+on:
+  schedule:
+    - cron: '05 14 28 10 1'
+
+jobs:
+  nightly_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+
+
+      - name: Run Unit Tests
+        run: mvn test
+
+      - name: Build with Maven
+        run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: demo.war
+          path: ./target/*demo*.war
+  
