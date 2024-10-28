@@ -1,4 +1,4 @@
-name: nightly build at 2:30 PM
+name: nightly build at 2:05 PM
 
 on:
   schedule:
