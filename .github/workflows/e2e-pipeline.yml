@@ -31,7 +31,7 @@ jobs:
 
     strategy:
       fail-fast: false # True: If one job in a matrix fails, GitHub Actions will cancel all other jobs in that matrix.
-        language: [ 'javascript', 'java' ]
+      language: [ 'javascript', 'java' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Matrix Jobs: The matrix specifies language: ['javascript', 'java'], so there will be two jobs: one for JavaScript and one for Java.
 
